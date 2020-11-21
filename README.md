@@ -11,14 +11,13 @@
 ------------
 ### Instalation
 - django
-1. git clone https://github.com/bubaley/django-vue-template.git
-2. cd django-vue-template
-3. python venv -m env
-4. source env/bin/activate (for windows env\Scripts\activate)
-5. pip install -r requirements.txt
-6. create .env file in core/setttings
-7. python manage.py migrate
-8. python manage.py runserver
+1. git clone https://github.com/ElizaPogudo/fut-money-bot-2021.git
+2. python -m venv env
+3. source env/bin/activate (for windows env\Scripts\activate)
+4. pip install -r requirements.txt
+5. create .env file in core/setttings
+6. python manage.py migrate
+7. python manage.py runserver
 - vue
 1. cd frontend
 2. npm install
