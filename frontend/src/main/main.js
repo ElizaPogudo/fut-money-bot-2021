@@ -4,12 +4,20 @@ import router from "./router/router"
 import store from "./store/store"
 import vuetify from "../plugins/vuetify"
 import {initDefaultComponents, initModels} from '../vendor/initApp'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 
 require('../bootstrap')
 
 initDefaultComponents(Vue)
 initModels(Vue, store, require('./models'))
 
+library.add([faUserSecret, faCoffee])
+ 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+ 
 Vue.config.productionTip = false
 
 Vue.prototype.$eventBus = new Vue()
