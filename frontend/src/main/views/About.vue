@@ -14,9 +14,54 @@
             </h3>
         </v-row>
         <v-row no-gutters > 
-            <v-col class="featurewidget"><font-awesome-icon icon="coffee" /></v-col>
-            <v-col class="featurewidget">2</v-col>
-            <v-col class="featurewidget">3</v-col>
+            <v-col class="featurewidget">
+                <v-row no-gutters >
+                <font-awesome-icon class = "featurewidgeticon" icon="coffee" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Простота использования</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Для запуска торговли достаточно настроить поисковые фильтры в оф. приложении FIFA, после чего нажать кнопку "Запуск" на панели расширений вашего браузера. Все, можете заняться своими делами, пока бот делает свое дело.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget">
+                <v-row no-gutters >
+                <font-awesome-icon class = "featurewidgeticon" icon="user-shield" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Безопасность</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Бот действительно физически кликает на все кнопки вместо вас. Таким образом, сервер EA видит, что вы работаете руками. Единственное как они могут понять, что работает бот - это большая скорость и продолжительность торговли. Если же торговать с перерывами и на адекватной скорости, то получить бан будет ну очень сложно.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget">
+                <v-row no-gutters >
+                <font-awesome-icon class = "featurewidgeticon" icon="microchip" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Многофункциональность</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Благодаря множеству настроек, кликер можно использовать для решения огромного количества торговых задач. Подробнее об этом - в разделе "Как это работает?"</p>
+                </v-row>
+            </v-col>
+        </v-row>
+        <v-divider></v-divider>
+        <v-row no-gutters > 
+            <h3>
+                Также рекомендуем посмотреть видеообзор базовых принципов работы нашего расширения, в котором мы в реальном времени за 5 минут заработаем небольшую кучку монеток:
+            </h3>
+        </v-row>
+        <v-row>
+            <v-btn
+              color="error"
+              dark
+              large
+            >
+              Как это работает
+            </v-btn>
         </v-row>
     </v-container>
     <!-- <v-row no-gutters align="center" justify="center" class="d-flex flex-column fill-height text-h4 font-weight-medium">
@@ -77,6 +122,15 @@ h3 {
     display: inline-block;
     position: relative;
     vertical-align: top;
+}
+.featurewidgeticon{
+    color: rgba(252,69,84,.9);
+    display: block;
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 76px;
 }
 
 </style>
