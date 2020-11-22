@@ -1,16 +1,14 @@
 <template>
-    <v-navigation-drawer app v-model="$store.state.drawer" clipped>
+    <v-navigation-drawer app v-model="$store.state.drawer" 
+      right>
         <v-list dense>
-            <v-subheader>Наивгация</v-subheader>
+            <v-subheader>Навигация</v-subheader>
             <v-list-item-group
                     color="primary"
             >
-                <v-list-item :to="{name: 'userList'}">
-                    <v-list-item-icon>
-                        <v-icon>mdi-account</v-icon>
-                    </v-list-item-icon>
+                <v-list-item :to="{name: el.name}" v-for="(el, index) in list" :key="index">
                     <v-list-item-content>
-                        <v-list-item-title>Пользователи</v-list-item-title>
+                        <v-list-item-title>{{el.title}}</v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>
@@ -22,7 +20,12 @@
     export default {
         name: "Drawer",
         components: {},
-        data: () => ({}),
+        data: () => ({
+            list: [
+                {name: 'about', title: 'Главная'},
+                {name: 'howitworks', title: 'Как это работает?'}
+            ]
+        }),
         methods: {},
         computed: {}
     }

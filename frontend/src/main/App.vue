@@ -18,7 +18,7 @@
 
         data: () => ({}),
         created() {
-
+           this.$store.dispatch('me')
         },
         methods: {}
     };

@@ -2,20 +2,48 @@
     <v-col class="pa-0 fill-height background" v-bind:style="image">
         <drawer></drawer>
 
-        <v-app-bar app clipped-left>
-            <v-btn icon @click="$store.state.drawer = !$store.state.drawer">
-                <v-icon>mdi-menu</v-icon>
-            </v-btn>
+        <v-app-bar app clipped-left class="menu">
+            <v-toolbar-title style="font-family: Oswald,sans-serif;">FUT SNIPER BOT - Трансферный бот для комфортной торговли в FIFA 21</v-toolbar-title>
+            <v-spacer></v-spacer>
             <router-link :to="{name: 'about'}">
-                <div class="mx-3 black--text font-weight-medium">FUT MONEY BOT - Трансферный бот для комфортной торговли в FIFA 21</div>
+                <div class="mx-3 black--text font-weight-medium menuItem">Главная</div>
+            </router-link>
+            <router-link :to="{name: 'howitworks'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Преимущества</div>
+            </router-link>
+            <router-link :to="{name: 'howitworks'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Как это работает?</div>
+            </router-link>
+            <router-link :to="{name: 'howitworks'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Наши тарифы</div>
             </router-link>
             <v-spacer></v-spacer>
+            <div v-if="$store.getters.currentUser" class="huh">
             <div class="mr-3">{{$store.getters.currentUser.username}}</div>
             <v-btn @click="logout" icon>
                 <v-icon size="20">mdi-exit-to-app</v-icon>
             </v-btn>
+            <v-btn icon @click="$store.state.drawer = !$store.state.drawer">
+                <v-icon>mdi-menu</v-icon>
+            </v-btn>
+            </div>
+            <div v-else>
+                <router-link :to="{name: 'login'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Вход/Регистрация</div>
+            </router-link>
+            </div>
         </v-app-bar>
         <router-view></router-view>
+            <v-footer
+      class="font-weight-medium"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+    </v-footer>
     </v-col>
 </template>
 
@@ -53,5 +81,24 @@
     height: 100%;
     width: 100%;
     background-attachment: initial;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.menuItem{
+    font-family: Oswald,sans-serif;
+}
+.menu{
+    line-height: 80px;
+    font-size: 1.2rem;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+.huh{
+    z-index: 1000;
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 </style>

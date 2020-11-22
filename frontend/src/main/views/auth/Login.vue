@@ -40,7 +40,7 @@
                 }).then(response => {
                     this.loading = false
                     this.$router.push({
-                        name: 'home'
+                        name: 'about'
                     })
                 }).catch(e => {
                     this.loading = false

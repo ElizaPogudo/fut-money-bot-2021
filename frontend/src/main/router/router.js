@@ -6,6 +6,7 @@ import Login from '../views/auth/Login'
 import Home from '../views/Home'
 import NotFound from '../../components/template/NotFound'
 import About from '../views/About'
+import Howitworks from '../views/Howitworks'
 
 import {user} from '../models'
 
@@ -15,27 +16,33 @@ const routes = [
         name: 'home',
         component: Home,
         meta: {
-            auth: true,
+            auth: false,
         },
         children: [
             {
                 name: 'about',
-                path: '',
+                path: '/about',
                 component: About
+            },
+            {
+                name: 'howitworks',
+                path: '/howitworks',
+                component: Howitworks
+            },
+            {
+                path: '/register',
+                name: 'register',
+                component: Register,
+            },
+            {
+                path: '/login',
+                name: 'login',
+                component: Login,
             },
             ...user.getRoutes()
         ]
     },
-    {
-        path: '/register',
-        name: 'register',
-        component: Register,
-    },
-    {
-        path: '/login',
-        name: 'login',
-        component: Login,
-    },
+    
     {
         path: '/404',
         name: '404',

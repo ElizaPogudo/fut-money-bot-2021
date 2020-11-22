@@ -15,7 +15,7 @@
         </v-row>
         <v-row no-gutters > 
             <v-col class="featurewidget">
-                <v-row no-gutters >
+                <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="coffee" />
                 </v-row>
                 <v-row no-gutters >
@@ -26,7 +26,7 @@
                 </v-row>
             </v-col>
             <v-col class="featurewidget">
-                <v-row no-gutters >
+                <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="user-shield" />
                 </v-row>
                 <v-row no-gutters >
@@ -37,7 +37,7 @@
                 </v-row>
             </v-col>
             <v-col class="featurewidget">
-                <v-row no-gutters >
+                <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="microchip" />
                 </v-row>
                 <v-row no-gutters >
@@ -54,13 +54,16 @@
                 Также рекомендуем посмотреть видеообзор базовых принципов работы нашего расширения, в котором мы в реальном времени за 5 минут заработаем небольшую кучку монеток:
             </h3>
         </v-row>
-        <v-row>
-            <v-btn
-              color="error"
-              dark
-              large
-            >
-              Как это работает
+        <v-row class = "center" style="padding-bottom: 10px; padding-top: 20px;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5IMsyMi4wR0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </v-row>
+        <v-row class = "button-container center">
+            <v-btn color="error" dark large @click="redirect">
+              Как это работает?
+                <v-icon dark right>
+                    mdi-arrow-right
+                </v-icon>
             </v-btn>
         </v-row>
     </v-container>
@@ -75,7 +78,7 @@
         name: "About",
         components: {},
         data: () => ({}),
-        methods: {},
+        methods: {redirect() {this.$router.push({name: 'howitworks'})}},
         computed: {}
     }
 </script>
@@ -89,6 +92,7 @@
     background: rgba(255,255,255,.93);
     box-shadow: 4px 0 9px -6px #222,-4px 0 9px -6px #222;
     margin-top: 100px;
+    margin-bottom: 100px;
     height: max-content;
     padding: 25px 40px;
     text-align: center;
@@ -126,11 +130,17 @@ h3 {
 .featurewidgeticon{
     color: rgba(252,69,84,.9);
     display: block;
-    width: 75px;
-    height: 75px;
+    width: 30px;
+    height: 30px;
     font-size: 30px;
     text-align: center;
     line-height: 76px;
+}
+.center{
+    justify-content: center;
+}
+.button-container{
+    padding: 30px 0 10px;
 }
 
 </style>
