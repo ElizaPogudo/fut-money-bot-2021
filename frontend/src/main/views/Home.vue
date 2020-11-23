@@ -8,7 +8,7 @@
             <router-link :to="{name: 'about'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Главная</div>
             </router-link>
-            <router-link :to="{name: 'howitworks'}">
+            <router-link :to="{name: 'advantages'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Преимущества</div>
             </router-link>
             <router-link :to="{name: 'howitworks'}">
@@ -17,7 +17,6 @@
             <router-link :to="{name: 'buy'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Наши тарифы</div>
             </router-link>
-            <v-spacer></v-spacer>
             <div v-if="$store.getters.currentUser" class="huh">
             <div class="mr-3">{{$store.getters.currentUser.username}}</div>
             <v-btn @click="logout" icon>
@@ -41,7 +40,7 @@
         class="text-center"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>FUT MONEY BOT</strong>
       </v-col>
     </v-footer>
     </v-col>

@@ -113,6 +113,71 @@
             </v-col>
         </v-row>
         <v-divider></v-divider>
+        <v-row no-gutters >
+            <h3>
+                Не можете определиться, нужно ли вам это расширение?<br>
+                Давайте рассмотрим ситуации, когда он может помочь вам сэкономить время и заработать монеты:
+            </h3>
+        </v-row>
+        <v-row no-gutters >
+            <v-col class="featurewidget">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="info" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Быстрый заработок во время ивентов</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Как известно, на старте ивентов на рынке творится ажиотаж. Многие массово сливают все что у них есть по низким ценам, чтобы скорее поиграть за новые карточки. Этим можно легко воспользоваться и дешево купить игроков себе в состав или тут же перепродать на 20-70% дороже.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="info" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Выгодная сборка СБЧ</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Поверьте, с таким ботом собирать СБЧ одно удовольствие. Просто импортируйте сборку с futbin.com либо составьте свой список недостающих в сборке игроков, затем запускайте бота и он заснайпит все нужные карточки вместо вас. Кроме того, что так собрать СБЧ будет намного быстрее, так и в моменты ажиотажа расширение может выловить ключевые карточки по цене в 2-3 раза дешевле.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="info" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Закупка большого числа карточек</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Если вы знаете, что сейчас какие-то карточки продаются по низкой цене (либо если вы считаете, что они скоро вырастут в цене) - закупите их побольше и отправьте в трансферный список либо оставьте в нераспределенных (расширение умеет обходить ограничение на 5 карточек и оставлять там любое число предметов). При этом можете указать цену закупки еще ниже рыночной и сделать свой профит еще больше.</p>
+                </v-row>
+            </v-col>
+        </v-row>
+        <v-row no-gutters style="justify-content: center">
+            <v-col class="featurewidget widg30">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="info" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Долгосрочная торговля</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Пусть кликер заработает вам немного монет пока вы не играете! Просто включите закупку какого-нибудь серебра или расходников по низкой цене и настройте их продажу по рыночной. Все, можете идти по своим делам. По сути, это основной вариант пассивного заработка монет, а его размер будет зависеть от выбранных вами фильтров.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget widg30">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="info" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>Снайп нужного игрока в свой состав</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Не секрет, что часто некоторые люди по ошибке или незнанию выставляют дорогие карточки по низкой цене. При этом все равно довольно глупо сидеть самому сутками и пытаться выловить такую. А вот поручить это делать боту - почему бы и нет?</p>
+                </v-row>
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 

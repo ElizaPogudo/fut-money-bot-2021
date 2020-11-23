@@ -7,6 +7,7 @@ import Home from '../views/Home'
 import NotFound from '../../components/template/NotFound'
 import About from '../views/About'
 import Howitworks from '../views/Howitworks'
+import Advantages from '../views/Advantages'
 import Buy from '../views/Buy'
 
 import {user} from '../models'
@@ -34,6 +35,11 @@ const routes = [
                 name: 'buy',
                 path: '/buy',
                 component: Buy
+            },
+            {
+                name: 'advantages',
+                path: '/advantages',
+                component: Advantages
             },
             {
                 path: '/register',
