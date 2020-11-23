@@ -32,7 +32,7 @@ const routes = [
                 component: Howitworks
             },
             {
-                name: 'buy',
+                name: 'buy', //тест
                 path: '/buy',
                 component: Buy
             },
