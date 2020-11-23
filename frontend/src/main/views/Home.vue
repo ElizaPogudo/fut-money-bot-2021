@@ -14,7 +14,7 @@
             <router-link :to="{name: 'howitworks'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Как это работает?</div>
             </router-link>
-            <router-link :to="{name: 'howitworks'}">
+            <router-link :to="{name: 'buy'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Наши тарифы</div>
             </router-link>
             <v-spacer></v-spacer>
