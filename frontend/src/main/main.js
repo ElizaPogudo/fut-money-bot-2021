@@ -7,7 +7,7 @@ import {initDefaultComponents, initModels} from '../vendor/initApp'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserShield, faCoffee, faMicrochip, faInfo, faPlane, faCartPlus, faDownload, faUsers, faCogs} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-//test
+
 
 require('../bootstrap')
 
