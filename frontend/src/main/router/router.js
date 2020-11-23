@@ -7,6 +7,7 @@ import Home from '../views/Home'
 import NotFound from '../../components/template/NotFound'
 import About from '../views/About'
 import Howitworks from '../views/Howitworks'
+import Buy from '../views/Buy'
 
 import {user} from '../models'
 
@@ -28,6 +29,11 @@ const routes = [
                 name: 'howitworks',
                 path: '/howitworks',
                 component: Howitworks
+            },
+            {
+                name: 'buy',
+                path: '/buy',
+                component: Buy
             },
             {
                 path: '/register',
