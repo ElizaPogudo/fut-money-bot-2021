@@ -8,6 +8,7 @@ import NotFound from '../../components/template/NotFound'
 import About from '../views/About'
 import Howitworks from '../views/Howitworks'
 import Advantages from '../views/Advantages'
+import Buy from '../views/Buy'
 
 import {user} from '../models'
 
@@ -22,13 +23,18 @@ const routes = [
         children: [
             {
                 name: 'about',
-                path: '/',
+                path: '/about',
                 component: About
             },
             {
                 name: 'howitworks',
                 path: '/howitworks',
                 component: Howitworks
+            },
+            {
+                name: 'buy',
+                path: '/buy',
+                component: Buy
             },
             {
                 name: 'advantages',
