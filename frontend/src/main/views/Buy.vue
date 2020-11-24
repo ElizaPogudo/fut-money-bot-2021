@@ -12,47 +12,68 @@
                 Для использования нашего бота вам потребуется подписка. Актуальные варианты подписки на данный момент:
             </h3>
         </v-row>
-        <v-row no-gutters >
-            <v-col class="featurewidget">
+        <template v-if="type === 'standart'">
+            <v-row no-gutters class = "center">
+            <v-col class="featurewidget widg30">
                 <v-row no-gutters class = "center">
-                <font-awesome-icon class = "featurewidgeticon" icon="coffee" />
+                <font-awesome-icon class = "featurewidgeticon" icon="battery-half" />
                 </v-row>
                 <v-row no-gutters >
                 <h3>7 Дней</h3>
                 </v-row>
                 <v-row no-gutters >
-                <p style= "margin-top: 10px;">Для запуска торговли достаточно настроить поисковые фильтры в оф. приложении FIFA, после чего нажать кнопку "Запуск" на панели расширений вашего браузера. Все, можете заняться своими делами, пока бот делает свое дело.</p>
+                <p style= "margin-top: 10px;">Цена подписки - 650р. В течении семи дней с момента оплаты можно пользоваться любыми функциями расширения на 2 ПК и 10 аккаунтах одновременно.</p>
                 </v-row>
             </v-col>
-            <v-col class="featurewidget">
+            <v-col class="featurewidget widg30">
                 <v-row no-gutters class = "center">
-                <font-awesome-icon class = "featurewidgeticon" icon="user-shield" />
+                <font-awesome-icon class = "featurewidgeticon" icon="battery-full" />
                 </v-row>
                 <v-row no-gutters >
                 <h3>30 Дней</h3>
                 </v-row>
                 <v-row no-gutters >
-                <p style= "margin-top: 10px;">Бот действительно физически кликает на все кнопки вместо вас. Таким образом, сервер EA видит, что вы работаете руками. Единственное как они могут понять, что работает бот - это большая скорость и продолжительность торговли. Если же торговать с перерывами и на адекватной скорости, то получить бан будет ну очень сложно.</p>
+                <p style= "margin-top: 10px;">Цена подписки - 1500р. В течении 30 дней с момента оплаты можно пользоваться любыми функциями расширения на 2 ПК и 10 аккаунтах одновременно.</p>
                 </v-row>
             </v-col>
         </v-row>
-        <v-row no-gutters style="justify-content: center">
-                <div class="radio-btn-group">
-                    <div class="radio">
-                        <input type="radio" name="radio" value="Standart" checked="checked" v-model="checked" id="Standart"/>
-                        <label for="Standart">Standart</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" name="radio" value="Premium" checked="checked" v-model="checked" id="Premium"/>
-                        <label for="Premium">Premium</label>
-                    </div>
-                </div>
-        <!--        <h5 class="show m-t-2">Test: <span>{{ checked }}</span></h5> -->
-            </v-row>
+        </template>
+        <template v-if="type === 'premium'">
+            <v-row no-gutters class = "center">
+            <v-col class="featurewidget widg30">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="battery-half" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>7 Дней</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Цена подписки - 890р. В течении семи дней с момента оплаты можно пользоваться любыми функциями расширения на 3 ПК и любом числе аккаунтов одновременно.</p>
+                </v-row>
+            </v-col>
+            <v-col class="featurewidget widg30">
+                <v-row no-gutters class = "center">
+                <font-awesome-icon class = "featurewidgeticon" icon="battery-full" />
+                </v-row>
+                <v-row no-gutters >
+                <h3>30 Дней</h3>
+                </v-row>
+                <v-row no-gutters >
+                <p style= "margin-top: 10px;">Цена подписки - 2000р. В течении 30 дней с момента оплаты можно пользоваться любыми функциями расширения на 3 ПК и любом числе аккаунтов одновременно.</p>
+                </v-row>
+            </v-col>
+        </v-row>
+        </template>
+
+        <div align="center" justify-content="center">
+                <v-btn class="subscriptionTypeBlock" color="error" dark large @click="changeTarif('standart')">
+                    Standart
+                </v-btn>
+                <v-btn class="subscriptionTypeBlock" color="error" dark large @click="changeTarif('premium')">
+                    Premium
+                </v-btn>
+        </div>
     </v-container>
-    <!-- <v-row no-gutters align="center" justify="center" class="d-flex flex-column fill-height text-h4 font-weight-medium">
-        Главный экран
-    </v-row> -->
 
 </template>
 
@@ -60,8 +81,13 @@
     export default {
         name: "Buy",
         components: {},
-        data: () => ({}),
-        methods: {redirect() {this.$router.push({name: 'buy'})}},
+        data: () => ({
+            type: 'standart'
+        }),
+        methods: {
+            redirect() {this.$router.push({name: 'buy'})},
+            changeTarif(tarif) {this.type = tarif}
+        },
         computed: {}
     }
 </script>
@@ -134,46 +160,22 @@ h3 {
 * {
   box-sizing: border-box;
 }
-.radio-btn-group {
-  display: -webkit-box;
-  display: flex;
-}
-.radio-btn-group .radio {
-  margin: 0 .25rem;
-}
-.radio-btn-group .radio label {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: .5rem 1.25rem;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #444;
-  -webkit-transition: box-shadow 400ms ease;
-  transition: box-shadow 400ms ease;
-}
-.radio-btn-group .radio label:hover {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
-.radio-btn-group .radio input[type="radio"] {
-  display: none;
-}
-.radio-btn-group .radio input[type="radio"]:checked + label {
-  background: #2196F3;
-  color: #fff;
-  border-color: #2196F3;
+.subscriptionTypeBlock {
+    display: inline-block;
+    margin: 30px 25px;
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+    box-shadow: 4px 0 9px -6px #222,-4px 0 9px -6px #222;
+    transition: all ease-in-out .2s;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    border: 2px solid #e84452;
 }
 
-.show {
-  font-weight: 400;
-  color: #444;
-}
-.show span {
-  background: #f5f5f5;
-  color: #F44336;
-  border-radius: 3px;
-  padding: .25rem .5rem;
-  font-size: 1.25rem;
-  border: 1px solid #f1f1f1;
+.widg30{
+    flex: .3;
 }
 
 </style>

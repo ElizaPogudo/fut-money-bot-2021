@@ -1,7 +1,7 @@
 <template>
     <v-layout class="ma-0" align-center fill-height>
         <v-flex xs10 md4 offset-md4 offset-xs1>
-            <v-card>
+            <v-card style="margin-top: 240px;">
                 <v-alert text tile border="top" color="error" class="ma-0" v-if="errors.length > 0">
                     <v-layout column class="ma-0">
                         <div class="body-2" v-for="(el, index) in errors" :key="index">{{el}}</div>

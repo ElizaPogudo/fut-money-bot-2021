@@ -1,6 +1,7 @@
 <template>
-    <v-col class="pa-0 fill-height background" v-bind:style="image">
-        <drawer></drawer>
+    <v-col class="pa-0" >
+
+        <drawer v-if="$store.getters.currentUser"></drawer>
 
         <v-app-bar app clipped-left class="menu">
             <v-toolbar-title style="font-family: Oswald,sans-serif;">FUT SNIPER BOT - Трансферный бот для комфортной торговли в FIFA 21</v-toolbar-title>
@@ -33,16 +34,11 @@
             </div>
         </v-app-bar>
         <router-view></router-view>
-            <v-footer
-      class="font-weight-medium"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        {{ new Date().getFullYear() }} — <strong>FUT MONEY BOT</strong>
-      </v-col>
-    </v-footer>
+        <v-footer class="font-weight-medium twh">
+            <v-col class="text-center" cols="12">
+                {{ new Date().getFullYear() }} — <strong>FUT MONEY BOT</strong>
+            </v-col>
+        </v-footer>
     </v-col>
 </template>
 
@@ -63,25 +59,25 @@
             }
         },
         computed: {
-            image() {
-                return {background : `url(${require('../../../static/images/main.jpg')})` }
 
-            }
         },
         watch: {}
     }
 </script>
 <style scoped>
     .background {
-        background-attachment: scroll;
+    background-attachment: scroll;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    position: relative;
     background-attachment: initial;
     overflow: auto;
     overflow-x: hidden;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
 }
 .menuItem{
     font-family: Oswald,sans-serif;
@@ -100,4 +96,10 @@
     align-items: center;
     justify-content: flex-end;
 }
+.twh {
+    position: absolute;
+    bottom: 0;
+    width: 100vW;
+}
+
 </style>

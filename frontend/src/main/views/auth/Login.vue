@@ -1,7 +1,7 @@
 <template>
     <v-layout class="ma-0" align-center fill-height>
         <v-flex xs10 md4 offset-md4 offset-xs1>
-            <v-card class="pa-3">
+            <v-card class="pa-3" style="margin-top: 240px;">
                 <div class="title font-weight-bold">Авторизация</div>
                 <v-text-field dense hide-details outlined class="mt-5" label="Логин"
                               v-model="username"></v-text-field>
