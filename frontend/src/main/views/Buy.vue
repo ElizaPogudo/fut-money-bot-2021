@@ -14,7 +14,7 @@
         </v-row>
         <v-row no-gutters >
             <v-col class="featurewidget">
-                <v-row no-gutters >
+                <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="coffee" />
                 </v-row>
                 <v-row no-gutters >
@@ -25,7 +25,7 @@
                 </v-row>
             </v-col>
             <v-col class="featurewidget">
-                <v-row no-gutters >
+                <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="user-shield" />
                 </v-row>
                 <v-row no-gutters >
@@ -35,20 +35,20 @@
                 <p style= "margin-top: 10px;">Бот действительно физически кликает на все кнопки вместо вас. Таким образом, сервер EA видит, что вы работаете руками. Единственное как они могут понять, что работает бот - это большая скорость и продолжительность торговли. Если же торговать с перерывами и на адекватной скорости, то получить бан будет ну очень сложно.</p>
                 </v-row>
             </v-col>
-            <v-row>
+        </v-row>
+        <v-row no-gutters style="justify-content: center">
                 <div class="radio-btn-group">
                     <div class="radio">
                         <input type="radio" name="radio" value="Standart" checked="checked" v-model="checked" id="Standart"/>
                         <label for="Standart">Standart</label>
                     </div>
                     <div class="radio">
-                        <input type="radio" name="radio" value="Premium" v-model="checked" id="Premium"/>
+                        <input type="radio" name="radio" value="Premium" checked="checked" v-model="checked" id="Premium"/>
                         <label for="Premium">Premium</label>
                     </div>
                 </div>
-                <h5 class="show m-t-2">Test: <span>{{ checked }}</span></h5>
+        <!--        <h5 class="show m-t-2">Test: <span>{{ checked }}</span></h5> -->
             </v-row>
-        </v-row>
     </v-container>
     <!-- <v-row no-gutters align="center" justify="center" class="d-flex flex-column fill-height text-h4 font-weight-medium">
         Главный экран
