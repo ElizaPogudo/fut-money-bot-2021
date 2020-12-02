@@ -3,8 +3,8 @@
         <v-row no-gutters > 
             <h1>FUT MONEY BOT</h1>
         </v-row>
-        <v-row no-gutters > 
-            <h2>Трансферный бот, встроенный в расширение для браузера, который полностью имитирует работу человека в официальном приложении FIFA WEB APP</h2>
+        <v-row class = "center" no-gutters >
+            <h2>Как это работает?</h2>
         </v-row>
         <v-divider></v-divider>
         <v-row no-gutters > 
@@ -50,10 +50,12 @@
         <v-divider></v-divider>
         <v-row no-gutters > 
             <h3>
-                Основные полезные функции нашего бота, которые могут вам пригодиться:
+                <button style="text-decoration: underline" @click="visibility1=!visibility1">
+                    Основные полезные функции нашего бота, которые могут вам пригодиться:
+                </button>
             </h3>
         </v-row>
-        <v-row no-gutters > 
+        <v-row v-if="visibility1" no-gutters >
             <v-col class="featurewidget">
                 <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="info" />
@@ -88,7 +90,7 @@
                 </v-row>
             </v-col>
         </v-row>
-        <v-row no-gutters style="justify-content: center"> 
+        <v-row v-if="visibility1" no-gutters style="justify-content: center">
             <v-col class="featurewidget widg30">
                 <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="info" />
@@ -115,11 +117,13 @@
         <v-divider></v-divider>
         <v-row no-gutters >
             <h3>
-                Не можете определиться, нужно ли вам это расширение?<br>
-                Давайте рассмотрим ситуации, когда он может помочь вам сэкономить время и заработать монеты:
+                <button style="text-decoration: underline" @click="visibility2=!visibility2">
+                    Не можете определиться, нужно ли вам это расширение?<br>
+                    Давайте рассмотрим ситуации, когда он может помочь вам сэкономить время и заработать монеты:
+                </button>
             </h3>
         </v-row>
-        <v-row no-gutters >
+        <v-row v-if="visibility2" no-gutters >
             <v-col class="featurewidget">
                 <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="info" />
@@ -154,7 +158,7 @@
                 </v-row>
             </v-col>
         </v-row>
-        <v-row no-gutters style="justify-content: center">
+        <v-row v-if="visibility2" no-gutters style="justify-content: center">
             <v-col class="featurewidget widg30">
                 <v-row no-gutters class = "center">
                 <font-awesome-icon class = "featurewidgeticon" icon="info" />
@@ -185,7 +189,10 @@
     export default {
         name: "About",
         components: {},
-        data: () => ({}),
+        data: () => ({
+            visibility1: false,
+            visibility2: false
+        }),
         methods: {},
         computed: {}
     }
