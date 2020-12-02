@@ -9,14 +9,17 @@
             <router-link :to="{name: 'about'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Главная</div>
             </router-link>
-            <router-link :to="{name: 'advantages'}">
-                <div class="mx-3 black--text font-weight-medium menuItem">Преимущества</div>
-            </router-link>
             <router-link :to="{name: 'howitworks'}">
-                <div class="mx-3 black--text font-weight-medium menuItem">Как это работает?</div>
+            <div class="mx-3 black--text font-weight-medium menuItem">Как это работает?</div>
+            </router-link>
+            <router-link :to="{name: 'advantages'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Бесплатно</div>
             </router-link>
             <router-link :to="{name: 'buy'}">
                 <div class="mx-3 black--text font-weight-medium menuItem">Наши тарифы</div>
+            </router-link>
+            <router-link :to="{name: 'instruction'}">
+                <div class="mx-3 black--text font-weight-medium menuItem">Инструкция</div>
             </router-link>
             <div v-if="$store.getters.currentUser" class="huh">
             <div class="mr-3">{{$store.getters.currentUser.username}}</div>

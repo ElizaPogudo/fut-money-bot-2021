@@ -9,6 +9,7 @@ import About from '../views/About'
 import Howitworks from '../views/Howitworks'
 import Advantages from '../views/Advantages'
 import Buy from '../views/Buy'
+import instruction from '../views/instruction'
 
 import {user} from '../models'
 
@@ -40,6 +41,11 @@ const routes = [
                 name: 'advantages',
                 path: '/advantages',
                 component: Advantages
+            },
+            {
+                name: 'instruction',
+                path: '/instruction',
+                component: instruction
             },
             {
                 path: '/register',
